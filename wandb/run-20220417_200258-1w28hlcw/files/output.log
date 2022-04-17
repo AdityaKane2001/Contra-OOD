@@ -1,0 +1,184 @@
+Downloading: 100% 482/482 [00:00<00:00, 437kB/s]
+Downloading: 100% 878k/878k [00:00<00:00, 2.40MB/s]
+Downloading: 100% 446k/446k [00:00<00:00, 1.47MB/s]
+
+
+
+
+
+
+
+
+
+
+
+
+Downloading: 100% 1.33G/1.33G [00:24<00:00, 57.8MB/s]
+Some weights of the model checkpoint at roberta-large were not used when initializing RobertaForSequenceClassification: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight', 'lm_head.layer_norm.weight', 'lm_head.dense.weight', 'lm_head.bias', 'lm_head.layer_norm.bias', 'lm_head.dense.bias', 'lm_head.decoder.weight']
+- This IS expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaForSequenceClassification were not initialized from the model checkpoint at roberta-large and are newly initialized: ['classifier.dense.bias', 'classifier.dense.weight', 'classifier.out_proj.bias', 'classifier.out_proj.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Downloading builder script: 28.8kB [00:00, 19.2MB/s]
+Downloading metadata: 28.7kB [00:00, 23.5MB/s]
+Loading rte
+Downloading and preparing dataset glue/rte (download: 680.81 KiB, generated: 1.83 MiB, post-processed: Unknown size, total: 2.49 MiB) to /root/.cache/huggingface/datasets/glue/rte/1.0.0/dacbe3125aa31d7f70367a07a8a9e72a5a0bfeb5fc42e75c9db75b96da6053ad...
+Downloading data: 100% 697k/697k [00:00<00:00, 19.9MB/s]
+100% 3/3 [00:00<00:00, 263.79it/s]
+Dataset glue downloaded and prepared to /root/.cache/huggingface/datasets/glue/rte/1.0.0/dacbe3125aa31d7f70367a07a8a9e72a5a0bfeb5fc42e75c9db75b96da6053ad. Subsequent calls will reuse this data.
+Loading sst2
+Downloading and preparing dataset glue/sst2 (download: 7.09 MiB, generated: 4.81 MiB, post-processed: Unknown size, total: 11.90 MiB) to /root/.cache/huggingface/datasets/glue/sst2/1.0.0/dacbe3125aa31d7f70367a07a8a9e72a5a0bfeb5fc42e75c9db75b96da6053ad...
+Downloading data: 100% 7.44M/7.44M [00:00<00:00, 47.6MB/s]
+
+100% 3/3 [00:00<00:00, 881.71it/s]
+Dataset glue downloaded and prepared to /root/.cache/huggingface/datasets/glue/sst2/1.0.0/dacbe3125aa31d7f70367a07a8a9e72a5a0bfeb5fc42e75c9db75b96da6053ad. Subsequent calls will reuse this data.
+Loading mnli
+Downloading and preparing dataset glue/mnli (download: 298.29 MiB, generated: 78.65 MiB, post-processed: Unknown size, total: 376.95 MiB) to /root/.cache/huggingface/datasets/glue/mnli/1.0.0/dacbe3125aa31d7f70367a07a8a9e72a5a0bfeb5fc42e75c9db75b96da6053ad...
+
+
+
+
+
+
+
+
+Downloading data: 100% 313M/313M [00:16<00:00, 19.5MB/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Generating test_mismatched split:  83% 8184/9847 [00:00<00:00, 13338.38 examples/s]
+
+100% 5/5 [00:00<00:00, 749.01it/s]
+Loading 20ng
+Downloading and preparing dataset newsgroups/18828_alt.atheism (download: 13.99 MiB, generated: 1.59 MiB, post-processed: Unknown size, total: 15.58 MiB) to /root/.cache/huggingface/datasets/newsgroups/18828_alt.atheism/3.0.0/8ea0c9dc025ecfbfd96a2c1e22caa1e1281f361946dac08205448d66f78398f5...
+Downloading builder script: 5.62kB [00:00, 4.61MB/s]
+Downloading metadata: 92.6kB [00:00, 67.1MB/s]
+
+Downloading data: 100% 14.7M/14.7M [00:03<00:00, 4.42MB/s]
+Generating train split:   0% 0/799 [00:00<?, ? examples/s]
+Dataset newsgroups downloaded and prepared to /root/.cache/huggingface/datasets/newsgroups/18828_alt.atheism/3.0.0/8ea0c9dc025ecfbfd96a2c1e22caa1e1281f361946dac08205448d66f78398f5. Subsequent calls will reuse this data.
+100% 1/1 [00:00<00:00, 821.12it/s]
+Generating train split:  19% 187/973 [00:00<00:01, 692.26 examples/s]
+Dataset newsgroups downloaded and prepared to /root/.cache/huggingface/datasets/newsgroups/18828_comp.graphics/3.0.0/8ea0c9dc025ecfbfd96a2c1e22caa1e1281f361946dac08205448d66f78398f5. Subsequent calls will reuse this data.
+100% 1/1 [00:00<00:00, 579.64it/s]
+Generating train split:  95% 940/985 [00:00<00:00, 5080.29 examples/s]
+Dataset newsgroups downloaded and prepared to /root/.cache/huggingface/datasets/newsgroups/18828_comp.os.ms-windows.misc/3.0.0/8ea0c9dc025ecfbfd96a2c1e22caa1e1281f361946dac08205448d66f78398f5. Subsequent calls will reuse this data.
+100% 1/1 [00:00<00:00, 836.52it/s]
+Generating train split:  92% 907/982 [00:00<00:00, 3970.67 examples/s]
+Dataset newsgroups downloaded and prepared to /root/.cache/huggingface/datasets/newsgroups/18828_comp.sys.ibm.pc.hardware/3.0.0/8ea0c9dc025ecfbfd96a2c1e22caa1e1281f361946dac08205448d66f78398f5. Subsequent calls will reuse this data.
+Downloading and preparing dataset newsgroups/18828_comp.sys.mac.hardware (download: 13.99 MiB, generated: 1.01 MiB, post-processed: Unknown size, total: 14.99 MiB) to /root/.cache/huggingface/datasets/newsgroups/18828_comp.sys.mac.hardware/3.0.0/8ea0c9dc025ecfbfd96a2c1e22caa1e1281f361946dac08205448d66f78398f5...
+100% 1/1 [00:00<00:00, 888.81it/s]
+100% 1/1 [00:00<00:00, 874.72it/s]
+Downloading and preparing dataset newsgroups/18828_comp.windows.x (download: 13.99 MiB, generated: 1.79 MiB, post-processed: Unknown size, total: 15.78 MiB) to /root/.cache/huggingface/datasets/newsgroups/18828_comp.windows.x/3.0.0/8ea0c9dc025ecfbfd96a2c1e22caa1e1281f361946dac08205448d66f78398f5...
+Dataset newsgroups downloaded and prepared to /root/.cache/huggingface/datasets/newsgroups/18828_comp.windows.x/3.0.0/8ea0c9dc025ecfbfd96a2c1e22caa1e1281f361946dac08205448d66f78398f5. Subsequent calls will reuse this data.
+100% 1/1 [00:00<00:00, 648.97it/s]
+Downloading and preparing dataset newsgroups/18828_misc.forsale (download: 13.99 MiB, generated: 903.44 KiB, post-processed: Unknown size, total: 14.87 MiB) to /root/.cache/huggingface/datasets/newsgroups/18828_misc.forsale/3.0.0/8ea0c9dc025ecfbfd96a2c1e22caa1e1281f361946dac08205448d66f78398f5...
+Dataset newsgroups downloaded and prepared to /root/.cache/huggingface/datasets/newsgroups/18828_misc.forsale/3.0.0/8ea0c9dc025ecfbfd96a2c1e22caa1e1281f361946dac08205448d66f78398f5. Subsequent calls will reuse this data.
+Downloading and preparing dataset newsgroups/18828_rec.autos (download: 13.99 MiB, generated: 1.24 MiB, post-processed: Unknown size, total: 15.22 MiB) to /root/.cache/huggingface/datasets/newsgroups/18828_rec.autos/3.0.0/8ea0c9dc025ecfbfd96a2c1e22caa1e1281f361946dac08205448d66f78398f5...
+100% 1/1 [00:00<00:00, 902.78it/s]
+Dataset newsgroups downloaded and prepared to /root/.cache/huggingface/datasets/newsgroups/18828_rec.autos/3.0.0/8ea0c9dc025ecfbfd96a2c1e22caa1e1281f361946dac08205448d66f78398f5. Subsequent calls will reuse this data.
+Downloading and preparing dataset newsgroups/18828_rec.motorcycles (download: 13.99 MiB, generated: 1.15 MiB, post-processed: Unknown size, total: 15.14 MiB) to /root/.cache/huggingface/datasets/newsgroups/18828_rec.motorcycles/3.0.0/8ea0c9dc025ecfbfd96a2c1e22caa1e1281f361946dac08205448d66f78398f5...
+100% 1/1 [00:00<00:00, 860.37it/s]
+Generating train split:   0% 0/994 [00:00<?, ? examples/s]
+Dataset newsgroups downloaded and prepared to /root/.cache/huggingface/datasets/newsgroups/18828_rec.motorcycles/3.0.0/8ea0c9dc025ecfbfd96a2c1e22caa1e1281f361946dac08205448d66f78398f5. Subsequent calls will reuse this data.
+100% 1/1 [00:00<00:00, 941.06it/s]
+Generating train split:   0% 0/994 [00:00<?, ? examples/s]
+Dataset newsgroups downloaded and prepared to /root/.cache/huggingface/datasets/newsgroups/18828_rec.sport.baseball/3.0.0/8ea0c9dc025ecfbfd96a2c1e22caa1e1281f361946dac08205448d66f78398f5. Subsequent calls will reuse this data.
+100% 1/1 [00:00<00:00, 868.21it/s]
+Generating train split:   0% 0/999 [00:00<?, ? examples/s]
+Dataset newsgroups downloaded and prepared to /root/.cache/huggingface/datasets/newsgroups/18828_rec.sport.hockey/3.0.0/8ea0c9dc025ecfbfd96a2c1e22caa1e1281f361946dac08205448d66f78398f5. Subsequent calls will reuse this data.
+100% 1/1 [00:00<00:00, 714.05it/s]
+Generating train split:   0% 1/991 [00:00<10:47,  1.53 examples/s]
+Dataset newsgroups downloaded and prepared to /root/.cache/huggingface/datasets/newsgroups/18828_sci.crypt/3.0.0/8ea0c9dc025ecfbfd96a2c1e22caa1e1281f361946dac08205448d66f78398f5. Subsequent calls will reuse this data.
+100% 1/1 [00:00<00:00, 743.80it/s]
+Generating train split:   0% 1/981 [00:00<11:36,  1.41 examples/s]
+Dataset newsgroups downloaded and prepared to /root/.cache/huggingface/datasets/newsgroups/18828_sci.electronics/3.0.0/8ea0c9dc025ecfbfd96a2c1e22caa1e1281f361946dac08205448d66f78398f5. Subsequent calls will reuse this data.
+100% 1/1 [00:00<00:00, 835.52it/s]
+Generating train split:  97% 962/990 [00:00<00:00, 1492.74 examples/s]
+Dataset newsgroups downloaded and prepared to /root/.cache/huggingface/datasets/newsgroups/18828_sci.med/3.0.0/8ea0c9dc025ecfbfd96a2c1e22caa1e1281f361946dac08205448d66f78398f5. Subsequent calls will reuse this data.
+100% 1/1 [00:00<00:00, 857.56it/s]
+100% 1/1 [00:00<00:00, 705.40it/s]
+Dataset newsgroups downloaded and prepared to /root/.cache/huggingface/datasets/newsgroups/18828_sci.space/3.0.0/8ea0c9dc025ecfbfd96a2c1e22caa1e1281f361946dac08205448d66f78398f5. Subsequent calls will reuse this data.
+Downloading and preparing dataset newsgroups/18828_soc.religion.christian (download: 13.99 MiB, generated: 2.20 MiB, post-processed: Unknown size, total: 16.19 MiB) to /root/.cache/huggingface/datasets/newsgroups/18828_soc.religion.christian/3.0.0/8ea0c9dc025ecfbfd96a2c1e22caa1e1281f361946dac08205448d66f78398f5...
+Dataset newsgroups downloaded and prepared to /root/.cache/huggingface/datasets/newsgroups/18828_soc.religion.christian/3.0.0/8ea0c9dc025ecfbfd96a2c1e22caa1e1281f361946dac08205448d66f78398f5. Subsequent calls will reuse this data.
+100% 1/1 [00:00<00:00, 777.59it/s]
+Downloading and preparing dataset newsgroups/18828_talk.politics.guns (download: 13.99 MiB, generated: 1.83 MiB, post-processed: Unknown size, total: 15.82 MiB) to /root/.cache/huggingface/datasets/newsgroups/18828_talk.politics.guns/3.0.0/8ea0c9dc025ecfbfd96a2c1e22caa1e1281f361946dac08205448d66f78398f5...
+Dataset newsgroups downloaded and prepared to /root/.cache/huggingface/datasets/newsgroups/18828_talk.politics.guns/3.0.0/8ea0c9dc025ecfbfd96a2c1e22caa1e1281f361946dac08205448d66f78398f5. Subsequent calls will reuse this data.
+100% 1/1 [00:00<00:00, 814.11it/s]
+Downloading and preparing dataset newsgroups/18828_talk.politics.mideast (download: 13.99 MiB, generated: 2.78 MiB, post-processed: Unknown size, total: 16.76 MiB) to /root/.cache/huggingface/datasets/newsgroups/18828_talk.politics.mideast/3.0.0/8ea0c9dc025ecfbfd96a2c1e22caa1e1281f361946dac08205448d66f78398f5...
+Dataset newsgroups downloaded and prepared to /root/.cache/huggingface/datasets/newsgroups/18828_talk.politics.mideast/3.0.0/8ea0c9dc025ecfbfd96a2c1e22caa1e1281f361946dac08205448d66f78398f5. Subsequent calls will reuse this data.
+Downloading and preparing dataset newsgroups/18828_talk.politics.misc (download: 13.99 MiB, generated: 2.01 MiB, post-processed: Unknown size, total: 15.99 MiB) to /root/.cache/huggingface/datasets/newsgroups/18828_talk.politics.misc/3.0.0/8ea0c9dc025ecfbfd96a2c1e22caa1e1281f361946dac08205448d66f78398f5...
+100% 1/1 [00:00<00:00, 842.23it/s]
+Dataset newsgroups downloaded and prepared to /root/.cache/huggingface/datasets/newsgroups/18828_talk.politics.misc/3.0.0/8ea0c9dc025ecfbfd96a2c1e22caa1e1281f361946dac08205448d66f78398f5. Subsequent calls will reuse this data.
+Downloading and preparing dataset newsgroups/18828_talk.religion.misc (download: 13.99 MiB, generated: 1.31 MiB, post-processed: Unknown size, total: 15.30 MiB) to /root/.cache/huggingface/datasets/newsgroups/18828_talk.religion.misc/3.0.0/8ea0c9dc025ecfbfd96a2c1e22caa1e1281f361946dac08205448d66f78398f5...
+100% 1/1 [00:00<00:00, 832.20it/s]
+Generating train split:   0% 0/628 [00:00<?, ? examples/s]
+
+100% 1/1 [00:00<00:00, 834.19it/s]
+Loading trec
+Downloading and preparing dataset trec/default (download: 350.79 KiB, generated: 403.39 KiB, post-processed: Unknown size, total: 754.18 KiB) to /root/.cache/huggingface/datasets/trec/default/1.1.0/751da1ab101b8d297a3d6e9c79ee9b0173ff94c4497b75677b59b61d5467a9b9...
+Downloading builder script: 5.50kB [00:00, 4.49MB/s]
+Downloading metadata: 2.99kB [00:00, 2.32MB/s]
+Downloading data files:   0% 0/2 [00:00<?, ?it/s]
+Dataset trec downloaded and prepared to /root/.cache/huggingface/datasets/trec/default/1.1.0/751da1ab101b8d297a3d6e9c79ee9b0173ff94c4497b75677b59b61d5467a9b9. Subsequent calls will reuse this data.
+Downloading data: 100% 336k/336k [00:00<00:00, 1.25MB/s]
+Downloading data: 100% 23.4k/23.4k [00:00<00:00, 347kB/s]
+Downloading data files: 100% 2/2 [00:01<00:00,  1.64it/s]
+Extracting data files: 100% 2/2 [00:00<00:00, 1258.98it/s]
+100% 2/2 [00:00<00:00, 479.02it/s]
+Downloading and preparing dataset imdb/plain_text (download: 80.23 MiB, generated: 127.02 MiB, post-processed: Unknown size, total: 207.25 MiB) to /root/.cache/huggingface/datasets/imdb/plain_text/1.0.0/2fdd8b9bcadd6e7055e742a706876ba43f19faee861df134affd7a3f60fc38a1...
+Downloading builder script: 4.31kB [00:00, 3.19MB/s]
+Downloading metadata: 2.17kB [00:00, 2.24MB/s]
+Downloading data: 100% 84.1M/84.1M [00:02<00:00, 39.8MB/s]
+
+
+
+
+
+
+
+
+
+
+Generating unsupervised split:  92% 45980/50000 [00:08<00:00, 8887.20 examples/s]
+
+100% 3/3 [00:00<00:00, 769.55it/s]
+100% 2/2 [00:01<00:00,  1.49it/s]
+Downloading builder script: 5.76kB [00:00, 4.90MB/s]
+100% 2/2 [00:00<00:00,  7.19it/s]
+
+
+
+
+
+
+
+
+100% 114/114 [00:16<00:00,  7.04it/s]
+Traceback (most recent call last):
+  File "run.py", line 170, in <module>
+    main()
+  File "run.py", line 166, in main
+    train(args, model, train_dataset, dev_dataset, test_dataset, benchmarks)
+  File "run.py", line 78, in train
+    detect_ood()
+  File "run.py", line 55, in detect_ood
+    results = evaluate_ood(args, model, test_dataset, ood_features, tag=tag)
+  File "/content/Contra-OOD/evaluation.py", line 36, in evaluate_ood
+    ood_keys = model.compute_ood(**batch)
+  File "/content/Contra-OOD/model.py", line 242, in compute_ood
+    'softmax': softmax_score.tolist(),
+KeyboardInterrupt

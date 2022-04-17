@@ -163,6 +163,7 @@ def main():
         else:
             _, _, ood_dataset = load(dataset, tokenizer, max_seq_length=args.max_seq_length)
             benchmarks = (('ood_' + dataset, ood_dataset),) + benchmarks
+    print("Training!!!")
     train(args, model, train_dataset, dev_dataset, test_dataset, benchmarks)
 
 

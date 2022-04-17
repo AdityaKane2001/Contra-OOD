@@ -1,0 +1,27 @@
+{
+    "os": "Linux-5.4.144+-x86_64-with-Ubuntu-18.04-bionic",
+    "python": "3.7.13",
+    "heartbeatAt": "2022-04-17T20:15:22.369201",
+    "startedAt": "2022-04-17T20:15:18.949842",
+    "docker": null,
+    "gpu": "Tesla T4",
+    "gpu_count": 1,
+    "cpu_count": 2,
+    "cuda": null,
+    "args": [
+        "--task_name",
+        "sst2"
+    ],
+    "state": "running",
+    "program": "run.py",
+    "codePath": "run.py",
+    "git": {
+        "remote": "https://AdityaKane2001:@github.com/AdityaKane2001/Contra-OOD.git",
+        "commit": "24be59131fd8db7d96485c799fdf622c17a793d7"
+    },
+    "email": null,
+    "root": "/content/Contra-OOD",
+    "host": "e9d22c693f87",
+    "username": "root",
+    "executable": "/usr/bin/python3"
+}
