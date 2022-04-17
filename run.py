@@ -113,7 +113,7 @@ def main():
     parser.add_argument("--max_seq_length", default=256, type=int)
     parser.add_argument("--task_name", default="sst2", type=str)
 
-    parser.add_argument("--batch_size", default=32, type=int)
+    parser.add_argument("--batch_size", default=16, type=int)
     parser.add_argument("--learning_rate", default=1e-5, type=float)
     parser.add_argument("--adam_epsilon", default=1e-6, type=float)
     parser.add_argument("--warmup_ratio", default=0.06, type=float)
@@ -154,7 +154,7 @@ def main():
         )
         model.to(0)
 
-    datasets = ['rte', 'sst2', 'mnli', '20ng', 'trec', 'imdb', 'wmt16', 'multi30k']
+    datasets = ['rte', 'sst2', 'mnli', '20ng', 'trec', 'imdb' ] # , 'wmt16', 'multi30k'
     benchmarks = ()
 
     for dataset in datasets:

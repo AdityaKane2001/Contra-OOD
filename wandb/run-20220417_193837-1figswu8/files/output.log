@@ -1,0 +1,260 @@
+Some weights of the model checkpoint at roberta-large were not used when initializing RobertaForSequenceClassification: ['lm_head.dense.bias', 'roberta.pooler.dense.weight', 'lm_head.dense.weight', 'lm_head.layer_norm.weight', 'roberta.pooler.dense.bias', 'lm_head.decoder.weight', 'lm_head.layer_norm.bias', 'lm_head.bias']
+- This IS expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaForSequenceClassification were not initialized from the model checkpoint at roberta-large and are newly initialized: ['classifier.dense.weight', 'classifier.out_proj.bias', 'classifier.dense.bias', 'classifier.out_proj.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Loading rte
+100% 3/3 [00:00<00:00, 146.20it/s]
+Loading sst2
+100% 3/3 [00:00<00:00, 121.73it/s]
+Loading mnli
+Downloading and preparing dataset glue/mnli (download: 298.29 MiB, generated: 78.65 MiB, post-processed: Unknown size, total: 376.95 MiB) to /root/.cache/huggingface/datasets/glue/mnli/1.0.0/dacbe3125aa31d7f70367a07a8a9e72a5a0bfeb5fc42e75c9db75b96da6053ad...
+
+
+
+
+
+
+
+Downloading data: 100% 313M/313M [00:13<00:00, 23.2MB/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 5/5 [00:00<00:00, 884.99it/s]
+Dataset glue downloaded and prepared to /root/.cache/huggingface/datasets/glue/mnli/1.0.0/dacbe3125aa31d7f70367a07a8a9e72a5a0bfeb5fc42e75c9db75b96da6053ad. Subsequent calls will reuse this data.
+Loading 20ng
+Downloading and preparing dataset newsgroups/18828_alt.atheism (download: 13.99 MiB, generated: 1.59 MiB, post-processed: Unknown size, total: 15.58 MiB) to /root/.cache/huggingface/datasets/newsgroups/18828_alt.atheism/3.0.0/8ea0c9dc025ecfbfd96a2c1e22caa1e1281f361946dac08205448d66f78398f5...
+Downloading builder script: 5.62kB [00:00, 6.47MB/s]
+Downloading metadata: 92.6kB [00:00, 69.6MB/s]
+Downloading data: 100% 14.7M/14.7M [00:00<00:00, 17.1MB/s]
+100% 1/1 [00:00<00:00, 909.83it/s]
+Generating train split:  59% 570/973 [00:00<00:00, 5696.05 examples/s]
+Dataset newsgroups downloaded and prepared to /root/.cache/huggingface/datasets/newsgroups/18828_alt.atheism/3.0.0/8ea0c9dc025ecfbfd96a2c1e22caa1e1281f361946dac08205448d66f78398f5. Subsequent calls will reuse this data.
+Downloading and preparing dataset newsgroups/18828_comp.graphics (download: 13.99 MiB, generated: 1.58 MiB, post-processed: Unknown size, total: 15.57 MiB) to /root/.cache/huggingface/datasets/newsgroups/18828_comp.graphics/3.0.0/8ea0c9dc025ecfbfd96a2c1e22caa1e1281f361946dac08205448d66f78398f5...
+Dataset newsgroups downloaded and prepared to /root/.cache/huggingface/datasets/newsgroups/18828_comp.graphics/3.0.0/8ea0c9dc025ecfbfd96a2c1e22caa1e1281f361946dac08205448d66f78398f5. Subsequent calls will reuse this data.
+Downloading and preparing dataset newsgroups/18828_comp.os.ms-windows.misc (download: 13.99 MiB, generated: 2.27 MiB, post-processed: Unknown size, total: 16.26 MiB) to /root/.cache/huggingface/datasets/newsgroups/18828_comp.os.ms-windows.misc/3.0.0/8ea0c9dc025ecfbfd96a2c1e22caa1e1281f361946dac08205448d66f78398f5...
+Dataset newsgroups downloaded and prepared to /root/.cache/huggingface/datasets/newsgroups/18828_comp.os.ms-windows.misc/3.0.0/8ea0c9dc025ecfbfd96a2c1e22caa1e1281f361946dac08205448d66f78398f5. Subsequent calls will reuse this data.
+100% 1/1 [00:00<00:00, 877.84it/s]
+100% 1/1 [00:00<00:00, 878.20it/s]
+Generating train split:   0% 0/982 [00:00<?, ? examples/s]
+Dataset newsgroups downloaded and prepared to /root/.cache/huggingface/datasets/newsgroups/18828_comp.sys.ibm.pc.hardware/3.0.0/8ea0c9dc025ecfbfd96a2c1e22caa1e1281f361946dac08205448d66f78398f5. Subsequent calls will reuse this data.
+100% 1/1 [00:00<00:00, 797.85it/s]
+Generating train split:   0% 1/961 [00:00<03:23,  4.72 examples/s]
+Dataset newsgroups downloaded and prepared to /root/.cache/huggingface/datasets/newsgroups/18828_comp.sys.mac.hardware/3.0.0/8ea0c9dc025ecfbfd96a2c1e22caa1e1281f361946dac08205448d66f78398f5. Subsequent calls will reuse this data.
+Downloading and preparing dataset newsgroups/18828_comp.windows.x (download: 13.99 MiB, generated: 1.79 MiB, post-processed: Unknown size, total: 15.78 MiB) to /root/.cache/huggingface/datasets/newsgroups/18828_comp.windows.x/3.0.0/8ea0c9dc025ecfbfd96a2c1e22caa1e1281f361946dac08205448d66f78398f5...
+Dataset newsgroups downloaded and prepared to /root/.cache/huggingface/datasets/newsgroups/18828_comp.windows.x/3.0.0/8ea0c9dc025ecfbfd96a2c1e22caa1e1281f361946dac08205448d66f78398f5. Subsequent calls will reuse this data.
+100% 1/1 [00:00<00:00, 875.27it/s]
+Generating train split:   0% 1/980 [00:00<04:13,  3.86 examples/s]
+Dataset newsgroups downloaded and prepared to /root/.cache/huggingface/datasets/newsgroups/18828_misc.forsale/3.0.0/8ea0c9dc025ecfbfd96a2c1e22caa1e1281f361946dac08205448d66f78398f5. Subsequent calls will reuse this data.
+100% 1/1 [00:00<00:00, 882.08it/s]
+100% 1/1 [00:00<00:00, 868.75it/s]
+Generating train split:   0% 0/990 [00:00<?, ? examples/s]
+Dataset newsgroups downloaded and prepared to /root/.cache/huggingface/datasets/newsgroups/18828_rec.autos/3.0.0/8ea0c9dc025ecfbfd96a2c1e22caa1e1281f361946dac08205448d66f78398f5. Subsequent calls will reuse this data.
+100% 1/1 [00:00<00:00, 839.20it/s]
+100% 1/1 [00:00<00:00, 938.11it/s]
+Generating train split:   0% 1/994 [00:00<08:07,  2.04 examples/s]
+Dataset newsgroups downloaded and prepared to /root/.cache/huggingface/datasets/newsgroups/18828_rec.motorcycles/3.0.0/8ea0c9dc025ecfbfd96a2c1e22caa1e1281f361946dac08205448d66f78398f5. Subsequent calls will reuse this data.
+Downloading and preparing dataset newsgroups/18828_rec.sport.baseball (download: 13.99 MiB, generated: 1.31 MiB, post-processed: Unknown size, total: 15.29 MiB) to /root/.cache/huggingface/datasets/newsgroups/18828_rec.sport.baseball/3.0.0/8ea0c9dc025ecfbfd96a2c1e22caa1e1281f361946dac08205448d66f78398f5...
+Dataset newsgroups downloaded and prepared to /root/.cache/huggingface/datasets/newsgroups/18828_rec.sport.baseball/3.0.0/8ea0c9dc025ecfbfd96a2c1e22caa1e1281f361946dac08205448d66f78398f5. Subsequent calls will reuse this data.
+100% 1/1 [00:00<00:00, 736.88it/s]
+100% 1/1 [00:00<00:00, 845.97it/s]
+Generating train split:   0% 0/991 [00:00<?, ? examples/s]
+Dataset newsgroups downloaded and prepared to /root/.cache/huggingface/datasets/newsgroups/18828_rec.sport.hockey/3.0.0/8ea0c9dc025ecfbfd96a2c1e22caa1e1281f361946dac08205448d66f78398f5. Subsequent calls will reuse this data.
+Downloading and preparing dataset newsgroups/18828_sci.crypt (download: 13.99 MiB, generated: 1.96 MiB, post-processed: Unknown size, total: 15.94 MiB) to /root/.cache/huggingface/datasets/newsgroups/18828_sci.crypt/3.0.0/8ea0c9dc025ecfbfd96a2c1e22caa1e1281f361946dac08205448d66f78398f5...
+Dataset newsgroups downloaded and prepared to /root/.cache/huggingface/datasets/newsgroups/18828_sci.crypt/3.0.0/8ea0c9dc025ecfbfd96a2c1e22caa1e1281f361946dac08205448d66f78398f5. Subsequent calls will reuse this data.
+100% 1/1 [00:00<00:00, 864.09it/s]
+Generating train split:   0% 1/981 [00:00<10:42,  1.53 examples/s]
+Dataset newsgroups downloaded and prepared to /root/.cache/huggingface/datasets/newsgroups/18828_sci.electronics/3.0.0/8ea0c9dc025ecfbfd96a2c1e22caa1e1281f361946dac08205448d66f78398f5. Subsequent calls will reuse this data.
+Downloading and preparing dataset newsgroups/18828_sci.med (download: 13.99 MiB, generated: 1.80 MiB, post-processed: Unknown size, total: 15.79 MiB) to /root/.cache/huggingface/datasets/newsgroups/18828_sci.med/3.0.0/8ea0c9dc025ecfbfd96a2c1e22caa1e1281f361946dac08205448d66f78398f5...
+Dataset newsgroups downloaded and prepared to /root/.cache/huggingface/datasets/newsgroups/18828_sci.med/3.0.0/8ea0c9dc025ecfbfd96a2c1e22caa1e1281f361946dac08205448d66f78398f5. Subsequent calls will reuse this data.
+100% 1/1 [00:00<00:00, 854.06it/s]
+Generating train split:   0% 1/990 [00:00<11:32,  1.43 examples/s]
+Dataset newsgroups downloaded and prepared to /root/.cache/huggingface/datasets/newsgroups/18828_sci.space/3.0.0/8ea0c9dc025ecfbfd96a2c1e22caa1e1281f361946dac08205448d66f78398f5. Subsequent calls will reuse this data.
+100% 1/1 [00:00<00:00, 802.28it/s]
+100% 1/1 [00:00<00:00, 878.57it/s]
+Generating train split:   0% 0/997 [00:00<?, ? examples/s]
+Dataset newsgroups downloaded and prepared to /root/.cache/huggingface/datasets/newsgroups/18828_soc.religion.christian/3.0.0/8ea0c9dc025ecfbfd96a2c1e22caa1e1281f361946dac08205448d66f78398f5. Subsequent calls will reuse this data.
+100% 1/1 [00:00<00:00, 804.74it/s]
+Generating train split:   0% 0/910 [00:00<?, ? examples/s]
+Dataset newsgroups downloaded and prepared to /root/.cache/huggingface/datasets/newsgroups/18828_talk.politics.guns/3.0.0/8ea0c9dc025ecfbfd96a2c1e22caa1e1281f361946dac08205448d66f78398f5. Subsequent calls will reuse this data.
+Downloading and preparing dataset newsgroups/18828_talk.politics.mideast (download: 13.99 MiB, generated: 2.78 MiB, post-processed: Unknown size, total: 16.76 MiB) to /root/.cache/huggingface/datasets/newsgroups/18828_talk.politics.mideast/3.0.0/8ea0c9dc025ecfbfd96a2c1e22caa1e1281f361946dac08205448d66f78398f5...
+Dataset newsgroups downloaded and prepared to /root/.cache/huggingface/datasets/newsgroups/18828_talk.politics.mideast/3.0.0/8ea0c9dc025ecfbfd96a2c1e22caa1e1281f361946dac08205448d66f78398f5. Subsequent calls will reuse this data.
+100% 1/1 [00:00<00:00, 884.50it/s]
+100% 1/1 [00:00<00:00, 916.79it/s]
+Dataset newsgroups downloaded and prepared to /root/.cache/huggingface/datasets/newsgroups/18828_talk.politics.misc/3.0.0/8ea0c9dc025ecfbfd96a2c1e22caa1e1281f361946dac08205448d66f78398f5. Subsequent calls will reuse this data.
+Downloading and preparing dataset newsgroups/18828_talk.religion.misc (download: 13.99 MiB, generated: 1.31 MiB, post-processed: Unknown size, total: 15.30 MiB) to /root/.cache/huggingface/datasets/newsgroups/18828_talk.religion.misc/3.0.0/8ea0c9dc025ecfbfd96a2c1e22caa1e1281f361946dac08205448d66f78398f5...
+100% 1/1 [00:00<00:00, 899.68it/s]
+Generating train split:   0% 0/628 [00:00<?, ? examples/s]
+
+100% 1/1 [00:00<00:00, 938.74it/s]
+Loading trec
+Downloading and preparing dataset trec/default (download: 350.79 KiB, generated: 403.39 KiB, post-processed: Unknown size, total: 754.18 KiB) to /root/.cache/huggingface/datasets/trec/default/1.1.0/751da1ab101b8d297a3d6e9c79ee9b0173ff94c4497b75677b59b61d5467a9b9...
+Dataset trec downloaded and prepared to /root/.cache/huggingface/datasets/trec/default/1.1.0/751da1ab101b8d297a3d6e9c79ee9b0173ff94c4497b75677b59b61d5467a9b9. Subsequent calls will reuse this data.
+Loading imdb
+Downloading builder script: 5.50kB [00:00, 6.09MB/s]
+Downloading metadata: 2.99kB [00:00, 3.72MB/s]
+Downloading data: 100% 336k/336k [00:00<00:00, 4.44MB/s]
+Downloading data: 100% 23.4k/23.4k [00:00<00:00, 1.22MB/s]
+Downloading data files: 100% 2/2 [00:00<00:00,  5.10it/s]
+Extracting data files: 100% 2/2 [00:00<00:00, 1374.06it/s]
+100% 2/2 [00:00<00:00, 789.22it/s]
+Downloading builder script: 4.31kB [00:00, 5.75MB/s]
+Downloading and preparing dataset imdb/plain_text (download: 80.23 MiB, generated: 127.02 MiB, post-processed: Unknown size, total: 207.25 MiB) to /root/.cache/huggingface/datasets/imdb/plain_text/1.0.0/2fdd8b9bcadd6e7055e742a706876ba43f19faee861df134affd7a3f60fc38a1...
+Downloading metadata: 2.17kB [00:00, 2.98MB/s]
+
+Downloading data: 100% 84.1M/84.1M [00:04<00:00, 18.6MB/s]
+
+
+
+
+
+
+
+Generating unsupervised split:  65% 32588/50000 [00:06<00:01, 9290.16 examples/s]
+
+100% 3/3 [00:00<00:00, 769.36it/s]
+Loading wmt16
+Downloading and preparing dataset wmt16/de-en (download: 1.57 GiB, generated: 1.28 GiB, post-processed: Unknown size, total: 2.85 GiB) to /root/.cache/huggingface/datasets/wmt16/de-en/1.0.0/9e0038fe4cc117bd474d2774032cc133e355146ed0a47021b2040ca9db4645c0...
+Downloading builder script: 2.81kB [00:00, 2.58MB/s]
+Downloading metadata: 18.6kB [00:00, 20.6MB/s]
+Downloading extra modules: 41.5kB [00:00, 35.9MB/s]
+Downloading data files:   0% 0/5 [00:00<?, ?it/s]
+
+
+
+
+
+Downloading data files:  20% 1/5 [00:10<00:43, 10.80s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Downloading data files:  40% 2/5 [00:55<01:31, 30.59s/it]
+
+
+
+
+Downloading data files:  60% 3/5 [01:03<00:41, 20.52s/it]]
+
+
+Downloading data files: 100% 5/5 [01:08<00:00, 13.67s/it]]
+
+
+
+Extracting data files: 100% 5/5 [00:43<00:00,  8.77s/it]
+Extracting data files: 0it [00:00, ?it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 3/3 [00:00<00:00, 15.12it/s]
+Traceback (most recent call last):
+  File "run.py", line 170, in <module>
+    main()
+  File "run.py", line 164, in main
+    _, _, ood_dataset = load(dataset, tokenizer, max_seq_length=args.max_seq_length)
+  File "/content/Contra-OOD/data.py", line 54, in load
+    datasets = load_multi30k()
+  File "/content/Contra-OOD/data.py", line 138, in load_multi30k
+    with open(file_name, 'r') as fh:
+FileNotFoundError: [Errno 2] No such file or directory: './data/multi30k/test_2016_flickr.en'
+Dataset wmt16 downloaded and prepared to /root/.cache/huggingface/datasets/wmt16/de-en/1.0.0/9e0038fe4cc117bd474d2774032cc133e355146ed0a47021b2040ca9db4645c0. Subsequent calls will reuse this data.
+Loading multi30k

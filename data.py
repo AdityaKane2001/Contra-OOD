@@ -2,6 +2,10 @@ import datasets
 from datasets import load_dataset
 import random
 
+import pandas as pd
+
+random.seed(1)
+
 datasets.logging.set_verbosity(datasets.logging.ERROR)
 
 task_to_keys = {
@@ -14,6 +18,21 @@ task_to_keys = {
     'wmt16': ("en", None),
     'multi30k': ("text", None),
 }
+
+
+def load_k_shot(dataset, k):
+    all_samples = []
+    if dataset is not None:
+        df = pd.DataFrame(data=dataset)
+        
+        for uniq in df["labels"].unique().tolist():
+            temp_df = df[df["labels"]==uniq]
+            label_list = temp_df.to_dict("records")
+            all_samples += random.sample(label_list, k)
+
+        random.shuffle(all_samples)
+
+        return all_samples
 
 
 def load(task_name, tokenizer, max_seq_length=256, is_id=False):
@@ -45,6 +64,11 @@ def load(task_name, tokenizer, max_seq_length=256, is_id=False):
     train_dataset = list(map(preprocess_function, datasets['train'])) if 'train' in datasets and is_id else None
     dev_dataset = list(map(preprocess_function, datasets['validation'])) if 'validation' in datasets and is_id else None
     test_dataset = list(map(preprocess_function, datasets['test'])) if 'test' in datasets else None
+    
+    if train_dataset is not None:
+        train_dataset = load_k_shot(train_dataset, 16)
+        dev_dataset = load_k_shot(dev_dataset, 16)
+
     return train_dataset, dev_dataset, test_dataset
 
 
