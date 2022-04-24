@@ -127,7 +127,7 @@ def main():
 
     wandb.init(project=args.project_name, name=args.task_name + '-' + str(args.alpha) + "_" + args.loss)
 
-    device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     args.n_gpu = torch.cuda.device_count()
     args.device = device
     set_seed(args)
@@ -142,7 +142,7 @@ def main():
         model = RobertaForSequenceClassification.from_pretrained(
             args.model_name_or_path, config=config,
         )
-        model.to(0)
+        model.to(args.device)
     elif args.model_name_or_path.startswith('bert'):
         config = BertConfig.from_pretrained(args.model_name_or_path, num_labels=num_labels)
         config.gradient_checkpointing = True
@@ -154,7 +154,7 @@ def main():
         )
         model.to(0)
 
-    datasets = ['rte', 'sst2', 'mnli', '20ng', 'trec', 'imdb' ] # , 'wmt16', 'multi30k'
+    datasets = ['rte', 'sst2', '20ng', 'trec', 'imdb', 'wmt16' ] # ,'mnli', 'wmt16', 'multi30k'
     benchmarks = ()
 
     for dataset in datasets:

@@ -67,9 +67,10 @@ def load(task_name, tokenizer, max_seq_length=256, is_id=False):
     test_dataset = list(map(preprocess_function, datasets['test'])) if 'test' in datasets else None
     
     if train_dataset is not None:
-        print(f"K shotting {task_name}")
-        train_dataset = load_k_shot(train_dataset, 16)
-        dev_dataset = load_k_shot(dev_dataset, 16)
+       k = 16
+       print(f"{k} shotting {task_name}")
+       train_dataset = load_k_shot(train_dataset, k)
+       dev_dataset = load_k_shot(dev_dataset, k)
 
     return train_dataset, dev_dataset, test_dataset
 

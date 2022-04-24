@@ -1,0 +1,27 @@
+{
+    "os": "Linux-5.13.0-35-generic-x86_64-with-debian-bullseye-sid",
+    "python": "3.7.13",
+    "heartbeatAt": "2022-04-18T04:55:27.268872",
+    "startedAt": "2022-04-18T04:55:26.555403",
+    "docker": null,
+    "gpu": "NVIDIA TITAN RTX",
+    "gpu_count": 2,
+    "cpu_count": 20,
+    "cuda": null,
+    "args": [
+        "--task_name",
+        "sst2"
+    ],
+    "state": "running",
+    "program": "run.py",
+    "codePath": "run.py",
+    "git": {
+        "remote": "https://AdityaKane2001:@github.com/AdityaKane2001/Contra-OOD.git",
+        "commit": "b8f425031b6efe1f24a9d276f6a4b14eaf42187d"
+    },
+    "email": "sahilkhose18@gmail.com",
+    "root": "/home/user/aditya_ws/Contra-OOD",
+    "host": "user-System",
+    "username": "user",
+    "executable": "/home/user/miniconda3/envs/zsi/bin/python3"
+}
