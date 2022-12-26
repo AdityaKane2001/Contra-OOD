@@ -66,11 +66,11 @@ def load(task_name, tokenizer, max_seq_length=256, is_id=False):
     dev_dataset = list(map(preprocess_function, datasets['validation'])) if 'validation' in datasets and is_id else None
     test_dataset = list(map(preprocess_function, datasets['test'])) if 'test' in datasets else None
     
-    if train_dataset is not None:
-       k = 16
-       print(f"{k} shotting {task_name}")
-       train_dataset = load_k_shot(train_dataset, k)
-       dev_dataset = load_k_shot(dev_dataset, k)
+    # if train_dataset is not None:
+    #    k = 16
+    #    print(f"{k} shotting {task_name}")
+    #    train_dataset = load_k_shot(train_dataset, k)
+    #    dev_dataset = load_k_shot(dev_dataset, k)
 
     return train_dataset, dev_dataset, test_dataset
 
@@ -162,7 +162,12 @@ def load_sst2():
         return examples
     datasets = load_dataset('glue', 'sst2')
     train_dataset = datasets['train']
+    print(len(train_dataset))
     dev_dataset = datasets['validation']
+    print(len(dev_dataset))
+
     test_dataset = process('./data/sst2/test.data')
+    print(len(test_dataset))
+    return None
     datasets = {'train': train_dataset, 'validation': dev_dataset, 'test': test_dataset}
     return datasets

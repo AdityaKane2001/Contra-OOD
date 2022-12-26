@@ -113,7 +113,7 @@ def main():
     parser.add_argument("--max_seq_length", default=256, type=int)
     parser.add_argument("--task_name", default="sst2", type=str)
 
-    parser.add_argument("--batch_size", default=16, type=int)
+    parser.add_argument("--batch_size", default=32, type=int)
     parser.add_argument("--learning_rate", default=1e-5, type=float)
     parser.add_argument("--adam_epsilon", default=1e-6, type=float)
     parser.add_argument("--warmup_ratio", default=0.06, type=float)
@@ -127,7 +127,7 @@ def main():
 
     wandb.init(project=args.project_name, name=args.task_name + '-' + str(args.alpha) + "_" + args.loss)
 
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
     args.n_gpu = torch.cuda.device_count()
     args.device = device
     set_seed(args)
@@ -142,7 +142,7 @@ def main():
         model = RobertaForSequenceClassification.from_pretrained(
             args.model_name_or_path, config=config,
         )
-        model.to(args.device)
+        model.to(0)
     elif args.model_name_or_path.startswith('bert'):
         config = BertConfig.from_pretrained(args.model_name_or_path, num_labels=num_labels)
         config.gradient_checkpointing = True
@@ -154,7 +154,7 @@ def main():
         )
         model.to(0)
 
-    datasets = ['rte', 'sst2', '20ng', 'trec', 'imdb', 'wmt16' ] # ,'mnli', 'wmt16', 'multi30k'
+    datasets = ['rte', 'sst2', '20ng', 'trec', 'imdb', 'wmt16']
     benchmarks = ()
 
     for dataset in datasets:
@@ -163,7 +163,6 @@ def main():
         else:
             _, _, ood_dataset = load(dataset, tokenizer, max_seq_length=args.max_seq_length)
             benchmarks = (('ood_' + dataset, ood_dataset),) + benchmarks
-    print("Training!!!")
     train(args, model, train_dataset, dev_dataset, test_dataset, benchmarks)
 
 
